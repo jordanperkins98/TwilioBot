@@ -1,5 +1,5 @@
 from twilio.rest import Client
-import requests, random, time
+import requests, random, time,config
 from datetime import datetime
 r = requests.get('https://type.fit/api/quotes')
 quotes = r.json()
@@ -9,7 +9,7 @@ while True:
     current_time = now.strftime("%H:%M")
 
     account_sid = 'ACdfb2f5950ec76b6913dbdf7b10fff7d7'
-    auth_token = 'a49bbc0f2b3c963e1bcc9595b5587f17'
+    auth_token = config.auth_token
     #Sends the message
     client = Client(account_sid, auth_token)
     message = client.messages.create(from_='whatsapp:+14155238886',

@@ -1,7 +1,1 @@
-from datetime import datetime
-
-now = datetime.now()
-
-current_time = now.strftime("%H:%M:%S")
-
-print(current_time)
+auth_token = "41785f121582bbff4910c1c731b2aec8"
